@@ -6,3 +6,8 @@
 	ed25519_randombytes_unsafe is used by the batch verification function
 	to create random scalars
 */
+
+void ED25519_FN(ed25519_randombytes_unsafe) (void *p, size_t len)
+{
+    arc4random_buf(p, len);
+}
